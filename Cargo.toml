@@ -8,7 +8,7 @@ version = "1.26.0"
 app_dirs = "1.1.1"
 backtrace = "0.3"
 chrono = { version = "0.4", features = ["serde"] }
-clap = { version = "2.22", default-features = false, features = ["suggestions", "wrap_help"] }
+clap = { version = "2.29", default-features = false, features = ["suggestions", "wrap_help"] }
 console = "0.5"
 curl = "0.4.8"
 dotenv = "0.10"
