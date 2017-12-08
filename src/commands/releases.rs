@@ -59,6 +59,7 @@ pub fn make_app<'a, 'b: 'a>(app: App<'a, 'b>) -> App<'a, 'b> {
             .value_name("PROJECT")
             .long("project")
             .short("p")
+            .global(true)
             .validator(validate_project))
         .subcommand(App::new("new")
             .about("Create a new release.")

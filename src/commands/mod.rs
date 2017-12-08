@@ -126,18 +126,22 @@ pub fn execute(args: Vec<String>, config: &mut Config) -> Result<()> {
         .arg(Arg::with_name("url")
             .value_name("URL")
             .long("url")
+            .global(true)
             .help("Fully qualified URL to the Sentry server.{n}[defaults to https://sentry.io/]"))
         .arg(Arg::with_name("auth_token")
             .value_name("AUTH_TOKEN")
             .long("auth-token")
+            .global(true)
             .help("Use the given Sentry auth token."))
         .arg(Arg::with_name("api_key")
             .value_name("API_KEY")
             .long("api-key")
+            .global(true)
             .help("The the given Sentry API key."))
         .arg(Arg::with_name("log_level")
             .value_name("LOG_LEVEL")
             .long("log-level")
+            .global(true)
             .help("Set the log output verbosity.{n}\
                    [valid levels: TRACE, DEBUG, INFO, WARN, ERROR]"));
 

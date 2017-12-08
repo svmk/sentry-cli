@@ -91,6 +91,7 @@ impl<'a: 'b, 'b> ArgExt for clap::App<'a, 'b> {
             .value_name("ORG")
             .long("org")
             .short("o")
+            .global(true)
             .validator(validate_org)
             .help("The organization slug"))
     }
@@ -100,6 +101,7 @@ impl<'a: 'b, 'b> ArgExt for clap::App<'a, 'b> {
             .value_name("PROJECT")
             .long("project")
             .short("p")
+            .global(true)
             .validator(validate_project)
             .help("The project slug"))
     }
@@ -112,6 +114,7 @@ impl<'a: 'b, 'b> ArgExt for clap::App<'a, 'b> {
             .multiple(true)
             .number_of_values(1)
             .required(false)
+            .global(true)
             .validator(validate_project)
             .help("The project slug.  This can be supplied multiple times."))
     }
@@ -121,6 +124,7 @@ impl<'a: 'b, 'b> ArgExt for clap::App<'a, 'b> {
             .value_name("VERSION")
             .required(true)
             .index(index)
+            .global(true)
             .validator(validate_version)
             .help("The version of the release"))
     }
